@@ -1,0 +1,7 @@
+<!-- link to show page -->
+
+<% Coupon.all.each do |coupon|%>
+	<%= coupon.store%><p>
+	<%= coupon.coupon_code%><p>
+	<%= link_to coupon.coupon_code, coupon_path(coupon)%>
+	<%end%>
